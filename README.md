@@ -3,15 +3,15 @@
 </p>
 <h1 align="center"> 志同道合（伙伴匹配系统）</h1>
 <div align="center">
-    <img alt="Maven" src="https://raster.shields.io/badge/Maven-3.8.1-red.svg"/>
-   <img alt="SpringBoot" src="https://raster.shields.io/badge/SpringBoot-2.67+-green.svg"/>
+    <img alt="Maven" src="https://raster.shields.io/badge/Maven-3.9.11-red.svg"/>
+   <img alt="SpringBoot" src="https://raster.shields.io/badge/SpringBoot-4.1.2-green.svg"/>
   <a href="https://github.com/qimu666/qi-api-sdk" target="_blank"><img src='https://img.shields.io/github/forks/zqywuxie/Study_Partner_backed' alt='GitHub forks' class="no-zoom"></a>
   <a href="https://github.com/qimu666/qi-api-sdk" target="_blank"><img src='https://img.shields.io/github/stars/zqywuxie/Study_Partner_backed' alt='GitHub stars' class="no-zoom"></a>
 </div>
 
 > 为大学生组队、交友等社交场景提供便利匹配的系统
 >
-> 该系统为H5移动端/PC端+后台管理系统，SpringBoot + Vue 全栈项目
+> 该系统为H5移动端，SpringBoot + Vue 全栈项目
 > 
 > 前端代码:[zqywuxie/Study_Partner_fronted: 志同道合(伙伴匹配系统前端代码) (github.com)](https://github.com/zqywuxie/Study_Partner_fronted)
 >
@@ -21,17 +21,16 @@
 
 该系统为**大学生**提供一个方便的交友平台，用户可以设置自己的标签来快速的匹配与自己相符的伙伴，并且可以创建队伍来进行组队打比赛等。极大的减小了找寻合适的伙伴成本。
 
-该项目后端采用主流的Java语言，适用SpringBoot框架快速搭建，前端采用Vue框架，适用Vant组件库进行搭建H5移动界面。采用单机架构开发，适用于小型应用程序，减少复杂性和维护成本，当然开发者可以选择进行微服务架构开发。
+该项目后端采用主流的Java语言，适用spring
+boot框架快速搭建，前端采用Vue框架，适用Vant组件库进行搭建H5移动界面。采用单机架构开发，适用于小型应用程序，减少复杂性和维护成本，当然开发者可以选择进行微服务架构开发。
 
 ## 项目背景
 
 目前QQ、Wechat等社交平台虽然也有类似的功能，但是不是很满足大学生的需求。并且通过王者荣耀的伙伴招募，组队等功能启发，决定开发出一个适用于大学生伙伴匹配的系统。目前大学生缺少竞赛组队、日常交友的渠道，如果经过他人介绍也会花很大成本去了解一个人，所以搭建一个伙伴匹配的平台，为大学生提供一个更方便，全面的交友组队平台。
 
-## 技术栈(PC端编写中)
+## 技术栈
 
 ### 前端技术栈
-
-H5移动端:
 
 - 开发框架：
     - Vue: 前端JavaScript框架，用于构建用户界面。
@@ -45,23 +44,6 @@ H5移动端:
 - 代码规范：
     - Prettier: 代码格式化工具，用于保持代码风格的一致性，自动格式化代码。
     - ESLint: JavaScript和TypeScript代码静态分析工具，用于发现和修复代码中的问题，强制代码规范。
-
-PC端：
-
-使用vue-element-plus-admin快速搭建项目,使用umi-openapi快速生成前端请求代码。
-
-pc端主要功能：
-
-- 随机匹配，智能匹配
-- 队伍创建
-
-待完善功能
-
-- 用户和队伍的搜索功能
-- 聊天室
-- 个人信息修改
-
-PC端的美化
 
 ### 后端技术栈：
 
@@ -90,7 +72,7 @@ PC端的美化
 
 ### 前端
 
-1. 环境要求：nodejs >= 14
+1. 环境要求：nodejs >= 20.19
 
 ~~~sh
 git clone https://github.com/zqywuxie/Study_Partner_fronted.git
@@ -113,7 +95,7 @@ vite
 
 ### 后端
 
-1. 环境要求：JDK1.8,SpringBoot 2.3.7.RELEASE,Maven 3.8.1
+1. 环境要求：JDK 21,SpringBoot 4.1.2,Maven 3.9.11
 
 注：不要轻易更改依赖版本，否则会导致错误
 
@@ -159,7 +141,6 @@ server:
 聊天模块
 
 - 支持私聊，群聊，公共群聊
-- 撤销，清空信息(待做)
 
 队伍模块
 
@@ -178,20 +159,9 @@ server:
 - 个人信息的修改
 - 查看创建，加入的队伍；我的博文；好友列表；关注列表
 
-
 管理员
 
-- 考虑新写一个移动端或者PC端管理(编写中)
-
-后期工作：
-
-- 后台管理的继续补充完善
-- 前台聊天记录的撤回，清空记录，UI的一些优化
-- 后期接入GPT进行使用
-- 添加签到功能，积分进行兑换某些奖品(GPT,VIP)
-- VIP功能：参考QQ
-- 加入支付功能
-- 接入QQ，WeChat登录
+- 考虑新写一个移动端或者PC端管理(待完善)
 
 ### 后端模块
 
@@ -293,12 +263,6 @@ server:
 
 ## 部署
 
-注意前端websocket请求要改变
-配置后面nginx的配置,因为使用ws是http协议,https无法使用http
-```html
-    let socketUrl = `wss://www.zqywuku.top/api/websocket/${uid}/${stats.value.team.teamId}`
-```
-
 ![image-20230918190150746](https://wuxie-image.oss-cn-chengdu.aliyuncs.com/2023/09/017/image-20230918190150746.png)
 
 ![image-20230918190324669](https://wuxie-image.oss-cn-chengdu.aliyuncs.com/2023/09/017/image-20230918190324669.png)
@@ -310,27 +274,16 @@ server:
 ![image-20230918190546133](https://wuxie-image.oss-cn-chengdu.aliyuncs.com/2023/09/017/image-20230918190546133.png)
 
 ```nginx
-    location / {
-        try_files $uri $uri/ @router;#需要指向下面的@router否则会出现vue的路由在nginx中刷新出现404
-        index  index.html index.htm;
-    }
-    #对应上面的@router，主要原因是路由的路径资源并不是一个真实的路径，所以无法找到具体的文件
-    #因此需要rewrite到index.html中，然后交给路由在处理请求资源
-    location @router {
-        rewrite ^.*$ /index.html last;
-    }
-    #通过配置端口指向部署websocker的项目
-    location /wss/  {   
-        proxy_pass http://127.0.0.1:8081/;        
-        proxy_http_version 1.1;    
-        proxy_set_header Upgrade $http_upgrade;    
-        proxy_set_header Connection "Upgrade";    
-        proxy_set_header X-real-ip $remote_addr;
-        proxy_set_header X-Forwarded-For $remote_addr;
-     }
-
+location / {
+    try_files $uri $uri/ @router;#需要指向下面的@router否则会出现vue的路由在nginx中刷新出现404
+    index  index.html index.htm;
+}
+#对应上面的@router，主要原因是路由的路径资源并不是一个真实的路径，所以无法找到具体的文件
+#因此需要rewrite到index.html中，然后交给路由在处理请求资源
+location @router {
+    rewrite ^.*$ /index.html last;
+}
 ```
-
 
 ## 项目展示
 

@@ -1,0 +1,64 @@
+.add_button {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    right: 12px;
+    height: 50px;
+    bottom: 115px;
+    z-index: 2;
+}
+
+.search_button {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    right: 12px;
+    height: 50px;
+    /*bottom: 50px;*/
+    bottom: 170px;
+    z-index: 2;
+}
+.ellipsis_button{
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    right: 12px;
+    height: 50px;
+    /*bottom: 50px;*/
+    bottom: 60px;
+    z-index: 2;
+}
+
+
+body {
+    background-color: rgb(205, 233, 255);
+    /*background-image: linear-gradient(180deg, #FFDEE9 0%, #B5FFFC 100%);*/
+
+}
+
+.van-button {
+    border-radius: 20px; /* 调整圆滑度，根据需要进行调整 */
+}
+
+:root {
+    --van-cell-group-background-color: ;
+    --van-divider-border-color: ;
+    --van-card-background-color: ;
+    --van-nav-bar-background-color: ;
+    --van-tabbar-background-color: ;
+    --van-search-background-color: ;
+    --van-tabs-nav-background-color: ;
+    --van-cell-background-color: ;
+    --van-cell-border-color: {
+
+    };
+    --van-tabbar-background-color: ;
+    --van-tabbar-item-active-background-color: ;
+    --van-divider-border-color: ;
+    --van-grid-item-content-background-color: ;
+}
+
+.van-hairline--bottom:after {
+    border-bottom-width: 0;
+}
+
